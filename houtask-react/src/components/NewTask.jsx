@@ -8,7 +8,11 @@ export const NewTask = (props) => {
             </span>
             <div className="contentbar__new-content">
                 <div className="contentbar__new-content-section">
-
+                    choice goal
+                    <select>
+                        <option value="Отдых">Отдых</option>
+                        <option value="Еще чета">Еще чета</option>
+                    </select>
                 </div>
                 <div className="contentbar__new-content-desc">
 

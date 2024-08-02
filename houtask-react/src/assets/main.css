@@ -62,3 +62,21 @@ body, html {
 
     width: 100%;
 }
+
+.contentbar__new-content{
+    display: flex;
+    width: 100%;
+}
+
+.contentbar__new-content-section {
+    display: flex;
+
+    font-size: 24px;
+
+    margin: 10px auto 0 auto;
+    flex-direction: column;
+}
+
+.contentbar__new-content-desc {
+    
+}
