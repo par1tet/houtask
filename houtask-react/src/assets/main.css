@@ -4,10 +4,61 @@ body, html {
     width: 100vw;
     height: 100vh;
     font-family: "Montserrat", sans-serif;
+
+    background-color: #14363a;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+
+    --width-sidebar: 340px;
+    --margin-contentbar: 10px;
+    --gap-contentbar: 10px;
 }
 
 .sidebar {
-    width: 396px;
+    width: var(--width-sidebar);
     height: 100vh;
     background-color: #5997AB;
+}
+
+.contentbar {
+    display: flex;
+    box-sizing: border-box;
+
+    flex-direction: column;
+    background-color: #00000000;
+
+    margin: var(--margin-contentbar);
+    gap: var(--gap-contentbar);
+
+    height: calc(100vh - calc(var(--margin-contentbar) * 2));
+    width: calc(100vw - var(--width-sidebar) - calc(var(--margin-contentbar) * 2));
+
+    overflow: hidden;
+    text-align: center;
+
+    --heigth-new-task: 55%;
+    --heigth-last-tasks: calc(100% - var(--heigth-new-task));
+}
+
+.app {
+    display: flex;
+}
+
+.contentbar__new-task {
+    background-color: #8060da;
+    height: var(--heigth-new-task);
+
+    border-radius: 10px;
+
+    width: 100%;
+}
+
+.contentbar__last-tasks {
+    background-color: #237ed3;
+    height: var(--heigth-last-tasks);
+
+    border-radius: 10px;
+
+    width: 100%;
 }
