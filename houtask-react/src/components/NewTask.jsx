@@ -1,6 +1,18 @@
-import React from "react"
+import React, { useEffect, useRef } from "react"
+import { ChoiceElement } from "./ChoiceElement.jsx"
+import { TextArea } from "./TextArea.jsx"
 
 export const NewTask = (props) => {
+    function handleStartTask(e){
+        const choiceGoalValue = document.querySelector(".contentbar__new-content-section > select").value
+        const descriptionValue = document.querySelector(".contentbar__new-content-desc > textarea").value
+        const tagsValue = document.querySelector(".contentbar__new-content-tags > textarea").value
+
+        console.log(choiceGoalValue)
+        console.log(descriptionValue)
+        console.log(tagsValue)
+    }
+
     return (
         <div className="contentbar__new-task">
             <span className="contentbar__new-task_text">
@@ -8,22 +20,19 @@ export const NewTask = (props) => {
             </span>
             <div className="contentbar__new-content">
                 <div className="contentbar__new-content-section">
-                    Choice goal
-                    <select>
-                        <option value="Отдых">Отдых</option>
-                        <option value="Еще чета">Еще чета</option>
-                    </select>
+                    <ChoiceElement title="Choice goal" options={[
+                        "Отдых",
+                        "Еще че та"
+                    ]}></ChoiceElement>
                 </div>
                 <div className="contentbar__new-content-desc">
-                    Add description
-                    <textarea name="" id="" cols="30" rows="10" spellcheck="false"></textarea>
+                    <TextArea title={"Add description"} cols="36" rows="10"></TextArea>
                 </div>
                 <div className="contentbar__new-content-tags">
-                    Add tags
-                    <textarea name="" id="" cols="30" rows="5" spellcheck="false"></textarea>
+                    <TextArea title={"Add tags"} cols="36" rows="5"></TextArea>
                 </div>
                 <div className="contentbar__new-content-starttask">
-                    <button>Start task</button>
+                    <button onClick={handleStartTask}>Start task</button>
                 </div>
             </div>
         </div>
