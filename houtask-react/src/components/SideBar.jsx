@@ -9,11 +9,11 @@ export const SideBar = (props) => {
         </div>
         <nav className="sidebar__profile_navigation">
             <NavigationList className="sidebar__profile_navigation_item" navigations={[
-                {"title":"Tasks"},
-                {"title":"Goals"},
-                {"title":"Statistic"},
+                {"title":"Tasks", "newPath":"/"},
+                {"title":"Goals", "newPath":"/goals"},
+                {"title":"Statistic", "newPath":"/statistic"},
             ]}/>
-            <NavigationItem className="sidebar__profile_navigation_item">
+            <NavigationItem className="sidebar__profile_navigation_item" newPath="/settings">
                 Settings
             </NavigationItem>
         </nav>
