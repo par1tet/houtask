@@ -1,12 +1,15 @@
 import { useState } from 'react'
+import { TasksPage } from './pages/TasksPage.jsx'
 import { SideBar } from './components/SideBar.jsx'
-import { ContentBar } from './components/ContentBar.jsx'
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
   return (
     <div className='app'>
-      <SideBar />
-      <ContentBar />
+      <SideBar></SideBar>
+      <Routes>
+        <Route path='/' element={<TasksPage />} />
+      </Routes>
     </div>
   )
 }

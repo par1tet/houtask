@@ -14,7 +14,7 @@ export const SideBar = (props) => {
                 {"title":"Statistic"},
             ]}/>
             <NavigationItem className="sidebar__profile_navigation_item">
-                Tasks
+                Settings
             </NavigationItem>
         </nav>
     </div>)
