@@ -204,3 +204,12 @@ select:focus {
     flex-direction: column;
     justify-content: space-between;
 }
+
+.contentbar__goals {
+    background: linear-gradient(113deg, rgba(13,148,103,1) 0%, rgba(26,173,149,1) 41%, rgba(28,150,156,1) 100%);
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 10px;
+}

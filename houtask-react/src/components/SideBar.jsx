@@ -1,6 +1,6 @@
 import React from "react"
-import { NavigationItem } from "./NavigationItem.jsx"
-import { NavigationList } from "./NavigationList.jsx"
+import { NavigationItem } from "./UI/NavigationItem.jsx"
+import { NavigationList } from "./UI/NavigationList.jsx"
 
 export const SideBar = (props) => {
     return (<div className="sidebar">

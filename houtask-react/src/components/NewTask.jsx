@@ -1,6 +1,7 @@
-import React, { useEffect, useRef } from "react"
-import { ChoiceElement } from "./ChoiceElement.jsx"
-import { TextArea } from "./TextArea.jsx"
+import React from "react"
+import { ChoiceElement } from "./UI/ChoiceElement.jsx"
+import { TextArea } from "./UI/TextArea.jsx"
+import { ContentBar } from "./UI/ContentBar.jsx"
 
 export const NewTask = (props) => {
     function handleStartTask(e){
@@ -14,7 +15,7 @@ export const NewTask = (props) => {
     }
 
     return (
-        <div className="contentbar__new-task">
+        <ContentBar className="contentbar__new-task">
             <span className="contentbar__new-task_text">
                 create new task
             </span>
@@ -35,6 +36,6 @@ export const NewTask = (props) => {
                     <button onClick={handleStartTask}>Start task</button>
                 </div>
             </div>
-        </div>
+        </ContentBar>
     )
 }
