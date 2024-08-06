@@ -213,3 +213,7 @@ select:focus {
 
     border-radius: 10px;
 }
+
+.sidebar__profile_navigation_item-active {
+    background-color: red;
+}
