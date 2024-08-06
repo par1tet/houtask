@@ -10,7 +10,7 @@ body, html {
     font-size: 14px;
     font-weight: 500;
 
-    --width-sidebar: 340px;
+    --width-sidebar: 290px;
     --margin-contentbar: 10px;
     --gap-contentbar: 10px;
 }
@@ -159,11 +159,14 @@ select:focus {
 }
 
 .sidebar {
+    --background-color-sidebar: rgb(44, 49, 56);
+    
     width: var(--width-sidebar);
     height: 100vh;
-    background: rgb(44, 49, 56);
+    background-color: var(--background-color-sidebar);
 
     --heigth-profile: 8%;
+    --padding-nav-item: 10px;
 }
 
 .sidebar__profile {
@@ -175,21 +178,30 @@ select:focus {
 .sidebar__profile_navigation_item {
     display: flex;
 
-    width: 100%;
-
-    padding: 10px 0;
-
+    width: calc(100% - 4px);
     font-size: 16px;
 
-    transition: background-color 450ms;
+    border-left: 4px var(--background-color-sidebar) solid;
+
+    padding: var(--padding-nav-item) 0;
+
+    transition: border-left 450ms;
 
     justify-content: center;
-    text-align: center;
 }
 
 
 .sidebar__profile_navigation_item:hover {
-    background-color: #136468;
+    border-left-color: rgb(31, 170, 250);
+    cursor: pointer;
+}
+
+.sidebar__profile_navigation_item-active {
+    border-left-color:rgb(255, 0, 0);
+}
+
+.sidebar__profile_navigation_item-active:hover {
+    border-left-color:rgb(112, 11, 11);
     cursor: pointer;
 }
 
@@ -212,8 +224,4 @@ select:focus {
     height: 100%;
 
     border-radius: 10px;
-}
-
-.sidebar__profile_navigation_item-active {
-    background-color: red;
 }

@@ -7,11 +7,17 @@ import { SideBar } from './components/SideBar.jsx'
 import { Routes, Route } from 'react-router-dom'
 import { observer } from "mobx-react-lite"
 import { activePage } from './store/activePage.js'
+import { toJS } from "mobx";
 
 const myActivePage = new activePage()
 export const activePageContext = createContext();
 
 const App = observer(() => {
+  if(toJS(myActivePage.activePage) === ''){
+    let hrefPath = window.location.href.split('/')
+    myActivePage.activePage = hrefPath[hrefPath.length - 1]
+  }
+
   return (
     <activePageContext.Provider value={myActivePage}>
       <div className='app'>
