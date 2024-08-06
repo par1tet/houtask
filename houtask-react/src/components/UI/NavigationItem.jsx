@@ -17,7 +17,7 @@ export const NavigationItem = observer(({children, className, newPath}) => {
         // Получаем предыдущию кноку
         // console.log(lastPageItem)
 
-        lastPageItem.classList.remove('sidebar__profile_navigation_item-active')
+        lastPageItem !== null ? lastPageItem.classList.remove('sidebar__profile_navigation_item-active') : null
         // Убираем активный класс для текущей кнопки
 
         activePage.activePage = children.toLowerCase()
