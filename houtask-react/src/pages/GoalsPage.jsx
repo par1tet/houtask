@@ -7,7 +7,7 @@ export const GoalsPage = (props) => {
         <div className="contentbar">
             <ContentBar className="contentbar__goals">
                 goal
-                <ListBar className={"tes e"}></ListBar>
+                <ListBar></ListBar>
             </ContentBar>
         </div>
     </div>)

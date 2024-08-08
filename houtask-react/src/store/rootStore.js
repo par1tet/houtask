@@ -6,7 +6,8 @@ export class rootStore {
     goals = new goalsStore()
     activePage = new activePageStore()
 
-    constructor(){
+    constructor(goals){
         makeAutoObservable(this)
+        this.goals.setGoals(goals)
     }
 }

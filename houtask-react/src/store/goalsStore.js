@@ -12,4 +12,8 @@ export class goalsStore {
     addGoal(name){
         this.goals.push(name)
     }
+
+    setGoals(goals){
+        this.goals = goals
+    }
 }

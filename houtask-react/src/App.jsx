@@ -9,7 +9,9 @@ import { TasksPage } from './pages/TasksPage.jsx'
 import { pagesList } from './utils/constData.js'
 import { rootStore } from "./store/rootStore.js"
 
-const myRootStore = new rootStore()
+const myRootStore = new rootStore([
+    'test1','test2','test3','test4','test5'
+])
 export const rootStoreContext = createContext();
 
 const App = observer(() => {
