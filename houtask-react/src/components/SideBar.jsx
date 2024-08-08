@@ -1,7 +1,7 @@
-import React, { useEffect } from "react"
+import React from "react"
+import { pages } from "../utils/constData.js"
 import { NavigationItem } from "./UI/NavigationItem.jsx"
 import { NavigationList } from "./UI/NavigationList.jsx"
-import { pages } from "../store/constData.js"
 
 export const SideBar = (props) => {
     return (<div className="sidebar">

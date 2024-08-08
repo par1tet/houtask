@@ -1,6 +1,6 @@
 import { makeAutoObservable } from "mobx"
 
-export class activePage {
+export class activePageStore {
     activePage = '';
 
     constructor(){
