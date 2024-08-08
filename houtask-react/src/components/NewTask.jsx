@@ -2,8 +2,12 @@ import React from "react"
 import { ChoiceElement } from "./UI/ChoiceElement.jsx"
 import { TextArea } from "./UI/TextArea.jsx"
 import { ContentBar } from "./UI/ContentBar.jsx"
+import { useStore } from './../hooks/useStore.js'
+import { toJS } from "mobx"
 
 export const NewTask = (props) => {
+    const rootStore = useStore()
+
     function handleStartTask(e){
         const choiceGoalValue = document.querySelector(".contentbar__new-content-section > select").value
         const descriptionValue = document.querySelector(".contentbar__new-content-desc > textarea").value
@@ -21,10 +25,9 @@ export const NewTask = (props) => {
             </span>
             <div className="contentbar__new-content">
                 <div className="contentbar__new-content-section">
-                    <ChoiceElement title="Choice goal" options={[
-                        "Отдых",
-                        "Еще че та"
-                    ]}></ChoiceElement>
+                    <ChoiceElement title="Choice goal" options={toJS(
+                        rootStore.goals.goals
+                    )}></ChoiceElement>
                 </div>
                 <div className="contentbar__new-content-desc">
                     <TextArea title={"Add description"} cols="36" rows="10"></TextArea>

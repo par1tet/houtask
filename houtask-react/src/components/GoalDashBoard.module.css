@@ -1,0 +1,12 @@
+.GoalDashBoard {
+    display: flex;
+
+    background-color: rgb(78, 78, 78);
+
+    box-sizing: border-box;
+    margin-top: 5px;
+
+    padding: 4px;
+
+    flex:1;
+}
