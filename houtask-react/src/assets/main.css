@@ -65,6 +65,11 @@ select:focus {
     --heigth-last-tasks: calc(100% - var(--heigth-new-task));
 }
 
+.contentbar > div {
+    padding: 0 5px;
+    box-sizing: border-box;
+}
+
 .app {
     display: flex;
 }
