@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react"
 import cl from "./ListBar.module.css"
-import { useStore } from "../../hooks/useStore"
+import { useStore } from "../../../hooks/useStore"
 
 export const ListBarItem = ({name, active, id}) => {
     const thisItem = useRef()
