@@ -227,5 +227,5 @@ select:focus {
 }
 
 .listbaritem-active {
-    background-color: red;
+    border-bottom-color: rgb(0, 180, 252)
 }
