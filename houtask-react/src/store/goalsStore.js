@@ -4,9 +4,8 @@ export class goalsStore {
     goals = [];
     activeGoal = 0;
 
-    constructor(goals){
+    constructor(){
         makeAutoObservable(this)
-        this.goals = goals
     }
 
     addGoal(name){

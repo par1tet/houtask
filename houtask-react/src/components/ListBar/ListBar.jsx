@@ -1,13 +1,9 @@
 import React, { useEffect, useRef } from "react"
 import cl from "./ListBar.module.css"
 import { ListBarItem } from "./ListBarItem.jsx"
-import { useStore } from "./../../hooks/useStore.js"
-import { observer } from "mobx-react-lite";
-import { toJS } from "mobx";
 
-export const ListBar = observer(({ className }) => {
+export const ListBar = ({ className, listItems, activeItem }) => {
     const currentObj = useRef()
-    const rootStore = useStore()
 
     useEffect(() => {
         if (className !== undefined){
@@ -18,14 +14,14 @@ export const ListBar = observer(({ className }) => {
     }, [])
 
     return (<div className={cl.ListBar} ref={currentObj}>
-        {toJS(rootStore.goals.goals).map((item, id) =>
+        {listItems.map((item, id) =>
             <ListBarItem
                 key={item}
                 name={item}
-                active={id === toJS(rootStore.goals.activeGoal)}
+                active={id === activeItem}
                 id={id}
             >
             </ListBarItem>
         )}
     </div>)
-})
+}

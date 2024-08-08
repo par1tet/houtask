@@ -27,7 +27,7 @@ export const NewTask = (props) => {
                 <div className="contentbar__new-content-section">
                     <ChoiceElement title="Choice goal" options={toJS(
                         rootStore.goals.goals
-                    )}></ChoiceElement>
+                    ).map(goal => goal.name)}></ChoiceElement>
                 </div>
                 <div className="contentbar__new-content-desc">
                     <TextArea title={"Add description"} cols="36" rows="10"></TextArea>
