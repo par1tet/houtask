@@ -25,7 +25,10 @@ export const CalendarOfActive = ({activeDays}) => {
             <div className={`${cl.calendar__content_days}`}>
                 {createArrayDay(getDaysByMonth(currentMonth),
                                 new Date().getMonth(),
-                                activeDays).map(day =>
+                                (() => activeDays.filter(currentDay => {
+                                        return 1+ +(currentDay.data.split(':')[0]) === currentMonth
+                                    }).map(currentDay => +(currentDay.data.split(':')[1]))
+                                )()).map(day =>
                     <Day key={day.data} day={day}></Day>
                 )}
             </div>

@@ -9,6 +9,7 @@ import { TasksPage } from './pages/TasksPage.jsx'
 import { pagesList } from './utils/constData.js'
 import { rootStore } from "./store/rootStore.js"
 import { goal } from "./utils/goal.js"
+import { day } from "./utils/day.js"
 
 const myRootStore = new rootStore([
 	new goal('test1', 'teste'),
@@ -17,7 +18,7 @@ const myRootStore = new rootStore([
 	new goal('ep', 'lorem'),
 	new goal('Hoe to jo ejs', 'hi'),
 	new goal('asdf', '123321'),
-], ['7:10','7:11'])
+], [new day('7:10', true),new day('7:11', true)])
 export const rootStoreContext = createContext();
 
 const App = observer(() => {
