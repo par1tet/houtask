@@ -9,6 +9,6 @@ export const Day = ({day}) => {
             return `${cl.day}`
         }
     })()}`}>
-
+        {day.data.split(':')[1]}
     </div>)
 }

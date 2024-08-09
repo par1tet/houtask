@@ -1,9 +1,9 @@
-import React from "react"
+import React, {forwardRef} from "react"
 
-export const ChoiceElement = ({title, options}) => {
+export const ChoiceElement = forwardRef(({title, options, onChange}, ref) => {
     return (<>
         {title}
-        <select>
+        <select ref={ref} onChange={onChange}>
             {options.map((option, index) => {
                 return (
                     <option value={option} key={index}>{option}</option>
@@ -11,4 +11,4 @@ export const ChoiceElement = ({title, options}) => {
             })}
         </select>
     </>)
-}
+})

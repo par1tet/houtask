@@ -17,7 +17,7 @@ const myRootStore = new rootStore([
 	new goal('ep', 'lorem'),
 	new goal('Hoe to jo ejs', 'hi'),
 	new goal('asdf', '123321'),
-])
+], ['7:10','7:11'])
 export const rootStoreContext = createContext();
 
 const App = observer(() => {

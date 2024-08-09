@@ -11,6 +11,7 @@ export class day{
 
 export function createArrayDay(count, month, activeDays){
     let answer = []
+    console.log(count)
 
     for(let i = 1;i !== count+1;i++){
         if (activeDays.includes(i)){
