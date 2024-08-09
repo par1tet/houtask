@@ -10,3 +10,29 @@
 
     flex:1;
 }
+
+.GoalDashBoardContent {
+    display: flex;
+
+    text-align: start;
+    flex-direction: column;
+
+    width: 80%;
+
+    background-color: rgb(102, 102, 102);
+    margin: 0 auto;
+}
+
+.GoalDashBoardContentData {
+    display: flex;
+    flex-direction: column;
+}
+
+.GoalDashBoardContentDaysAndActions {
+    display: flex;
+
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-top: 8px;
+}

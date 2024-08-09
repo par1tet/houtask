@@ -15,7 +15,7 @@ export const ListBarItem = ({name, active, id}) => {
     }, [active])
 
     function handleClick(e){
-        rootStore.goals.activeGoal = id
+        rootStore.goals.setActiveGoal(id)
     }
 
     return (<div

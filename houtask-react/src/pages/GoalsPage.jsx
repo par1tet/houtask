@@ -17,7 +17,7 @@ export const GoalsPage = observer((props) => {
                     listItems={toJS(rootStore.goals.goals).map(goal => goal.name)}
                     activeItem={toJS(rootStore.goals.activeGoal)}
                 ></ListBar>
-                <GoalDashBoard goal={toJS(rootStore.goals.goals[rootStore.goals.activeGoal]).name}></GoalDashBoard>
+                <GoalDashBoard goal={toJS(rootStore.goals.goals[rootStore.goals.activeGoal])}></GoalDashBoard>
             </ContentBar>
         </div>
     </div>)

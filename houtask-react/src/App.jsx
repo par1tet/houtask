@@ -8,15 +8,15 @@ import { StatisticPage } from './pages/StatisticPage.jsx'
 import { TasksPage } from './pages/TasksPage.jsx'
 import { pagesList } from './utils/constData.js'
 import { rootStore } from "./store/rootStore.js"
-import { createGoal } from "./utils/createGoal.js"
+import { goal } from "./utils/goal.js"
 
 const myRootStore = new rootStore([
-	createGoal('test1', 'teste'),
-	createGoal('test2', 'tessdf'),
-	createGoal('chill', 'qweqwe'),
-	createGoal('ep', 'lorem'),
-	createGoal('Hoe to jo ejs', 'hi'),
-	createGoal('asdf', '123321'),
+	new goal('test1', 'teste'),
+	new goal('test2', 'tessdf'),
+	new goal('chill', 'qweqwe'),
+	new goal('ep', 'lorem'),
+	new goal('Hoe to jo ejs', 'hi'),
+	new goal('asdf', '123321'),
 ])
 export const rootStoreContext = createContext();
 

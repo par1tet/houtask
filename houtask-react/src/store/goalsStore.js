@@ -15,4 +15,8 @@ export class goalsStore {
     setGoals(goals){
         this.goals = goals
     }
+
+    setActiveGoal(newActiveGoal){
+        this.activeGoal = newActiveGoal
+    }
 }

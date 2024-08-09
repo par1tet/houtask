@@ -1,0 +1,29 @@
+.calendar {
+    display: flex;
+
+    text-align: center;
+
+    flex-direction: column;
+}
+
+.calendar__content {
+    display: grid;
+
+    width: 500px;
+    height: 300px;
+
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+
+    background-color: antiquewhite;
+}
+
+.day {
+    background-color: rgb(59, 58, 58);
+    border: 2px solid black;
+}
+
+.day-active {
+    background-color: red;
+    border: 2px solid black;
+}

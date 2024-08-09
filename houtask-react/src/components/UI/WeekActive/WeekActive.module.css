@@ -1,0 +1,14 @@
+.weekactive {
+    display: flex;
+
+    text-align: center;
+
+    flex-direction: column;
+}
+
+.weekactive__content {
+    width: 500px;
+    height: 300px;
+
+    background-color: antiquewhite;
+}
