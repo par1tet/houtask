@@ -1,6 +1,6 @@
 import React from "react"
 import { ContentBar } from "./../components/UI/ContentBar.jsx"
-import { ListBar } from "../components/ListBar/ListBar.jsx"
+import { ListBar } from "./../components/UI/ListBar/ListBar.jsx"
 import { GoalDashBoard } from "../components/GoalDashBoard.jsx"
 import { useStore } from './../hooks/useStore.js'
 import { toJS } from 'mobx'
